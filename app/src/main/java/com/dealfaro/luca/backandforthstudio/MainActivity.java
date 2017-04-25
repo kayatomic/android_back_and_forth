@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -33,6 +34,10 @@ public class MainActivity extends AppCompatActivity {
         if (appInfo.sharedString != null) {
             edv2.setText(appInfo.sharedString);
         }
+
+        TextView tv1 = (TextView) findViewById(R.id.stringView1);
+        tv1.setText(appInfo.sharedString);
+
     }
 
     public void goOther(View V) {
@@ -48,10 +53,6 @@ public class MainActivity extends AppCompatActivity {
         EditText edv2 = (EditText) findViewById(R.id.editText);
         String text2 = edv2.getText().toString();
         appInfo.setColor(text2);
-
-        // Go to second activity
-        Intent intent = new Intent(this, SecondActivity.class);
-        startActivity(intent);
     }
 
     // Go to second activity

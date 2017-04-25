@@ -47,7 +47,7 @@
         android:layout_height="wrap_content"
         android:layout_marginRight="10dp"
         android:layout_marginTop="173dp"
-        android:onClick="goFirstActivity"
+        android:onClick="saveString"
         android:text="@string/enterString"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent" />

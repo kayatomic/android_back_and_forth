@@ -26,7 +26,7 @@ public class AppInfo {
             instance = new AppInfo();
             instance.my_context = context;
             SharedPreferences settings = context.getSharedPreferences(MainActivity.MYPREFS, 0);
-            instance.sharedString = settings.getString(COLOR_NAME, null);
+            instance.sharedString = settings.getString(MainActivity.PREF_STRING_1, null);
         }
         return instance;
     }

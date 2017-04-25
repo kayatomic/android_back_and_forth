@@ -3,9 +3,6 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/hw2_back_and_forth.iml" filepath="$PROJECT_DIR$/hw2_back_and_forth.iml" />
       <module fileurl="file://$PROJECT_DIR$/hw2_back_and_forth.iml" filepath="$PROJECT_DIR$/hw2_back_and_forth.iml" />
       <module fileurl="file://$PROJECT_DIR$/hw2_back_and_forth_studio.iml" filepath="$PROJECT_DIR$/hw2_back_and_forth_studio.iml" />
     </modules>
