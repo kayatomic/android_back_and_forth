@@ -25,15 +25,15 @@ public class SecondActivity extends AppCompatActivity {
     @Override
     protected void onResume() {
         super.onResume();
-        // Writes the string from main activity.
-        SharedPreferences settings = getSharedPreferences(MYPREFS, 0);
-        String myText = settings.getString(PREF_STRING_1, "");
-        TextView tv = (TextView) findViewById(R.id.stringView1);
-        tv.setText(myText);
+//        // Writes the string from main activity.
+//        SharedPreferences settings = getSharedPreferences(MYPREFS, 0);
+//        String myText = settings.getString(PREF_STRING_1, "");
+//        TextView tv = (TextView) findViewById(R.id.stringView1);
+//        tv.setText(myText);
 
-        // and the one from the singleton object
-        //TextView tv2 = (TextView) findViewById(R.id.textView3);
-        //tv2.setText(appInfo.sharedString);
+        // Writes the String from the singleton object
+        TextView tv2 = (TextView) findViewById(R.id.stringView1);
+        tv2.setText(appInfo.sharedString);
 
     }
 

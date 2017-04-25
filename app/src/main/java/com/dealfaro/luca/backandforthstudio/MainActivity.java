@@ -36,13 +36,13 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void goOther(View V) {
-        // Grab the text, and store it in a preference.
-        EditText edv = (EditText) findViewById(R.id.editText);
-        String text1 = edv.getText().toString();
-        SharedPreferences settings = getSharedPreferences(MYPREFS, 0);
-        SharedPreferences.Editor editor = settings.edit();
-        editor.putString(PREF_STRING_1, text1);
-        editor.commit();
+//        // Grab the text, and store it in a preference.
+//        EditText edv = (EditText) findViewById(R.id.editText);
+//        String text1 = edv.getText().toString();
+//        SharedPreferences settings = getSharedPreferences(MYPREFS, 0);
+//        SharedPreferences.Editor editor = settings.edit();
+//        editor.putString(PREF_STRING_1, text1);
+//        editor.commit();
 
         // The second string we store it in the singleton class.
         EditText edv2 = (EditText) findViewById(R.id.editText);
