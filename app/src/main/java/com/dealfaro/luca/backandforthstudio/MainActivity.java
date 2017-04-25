@@ -26,10 +26,10 @@ public class MainActivity extends AppCompatActivity {
         super.onResume();
         SharedPreferences settings = getSharedPreferences(MainActivity.MYPREFS, 0);
         String myText = settings.getString(MainActivity.PREF_STRING_1, "");
-        EditText edv = (EditText) findViewById(R.id.editText2);
+        EditText edv = (EditText) findViewById(R.id.editText);
         edv.setText(myText);
 
-        EditText edv2 = (EditText) findViewById(R.id.editText2);
+        EditText edv2 = (EditText) findViewById(R.id.editText);
         if (appInfo.sharedString != null) {
             edv2.setText(appInfo.sharedString);
         }
@@ -37,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void goOther(View V) {
         // Grab the text, and store it in a preference.
-        EditText edv = (EditText) findViewById(R.id.editText2);
+        EditText edv = (EditText) findViewById(R.id.editText);
         String text1 = edv.getText().toString();
         SharedPreferences settings = getSharedPreferences(MYPREFS, 0);
         SharedPreferences.Editor editor = settings.edit();
@@ -45,12 +45,24 @@ public class MainActivity extends AppCompatActivity {
         editor.commit();
 
         // The second string we store it in the singleton class.
-        EditText edv2 = (EditText) findViewById(R.id.editText2);
+        EditText edv2 = (EditText) findViewById(R.id.editText);
         String text2 = edv2.getText().toString();
         appInfo.setColor(text2);
 
         // Go to second activity
         Intent intent = new Intent(this, SecondActivity.class);
+        startActivity(intent);
+    }
+
+    // Go to second activity
+    public void goSecondActivity (View V) {
+        Intent intent = new Intent(this, SecondActivity.class);
+        startActivity(intent);
+    }
+
+    // Go to third activity
+    public void goThirdActivity (View V) {
+        Intent intent = new Intent(this, ThirdActivity.class);
         startActivity(intent);
     }
 

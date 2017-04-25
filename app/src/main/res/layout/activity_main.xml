@@ -21,16 +21,14 @@
         tools:layout_constraintTop_creator="1" />
 
     <EditText
-        android:id="@+id/editText2"
+        android:id="@+id/editText"
         android:layout_width="125dp"
         android:layout_height="43dp"
-        android:layout_marginRight="5dp"
         android:ems="10"
         android:inputType="textPersonName"
         app:layout_constraintBaseline_toBaselineOf="@+id/button1"
-        app:layout_constraintRight_toLeftOf="@+id/button1"
-        tools:layout_editor_absoluteX="136dp"
-        tools:layout_editor_absoluteY="104dp" />
+        android:layout_marginLeft="-5dp"
+        app:layout_constraintLeft_toLeftOf="@+id/stringView1" />
 
     <Button
         android:id="@+id/button1"
@@ -38,7 +36,8 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="23dp"
         android:layout_marginLeft="0dp"
-        android:text="@string/gostring"
+        android:onClick="goOther"
+        android:text="@string/enterString"
         app:layout_constraintBottom_toTopOf="@+id/button2"
         app:layout_constraintLeft_toLeftOf="@+id/button2" />
 
@@ -48,6 +47,7 @@
         android:layout_height="wrap_content"
         android:layout_marginRight="10dp"
         android:layout_marginTop="173dp"
+        android:onClick="goSecondActivity"
         android:text="@string/gostring"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -58,18 +58,63 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="0dp"
         android:layout_marginTop="27dp"
+        android:onClick="goThirdActivity"
         android:text="@string/gostring"
         app:layout_constraintLeft_toLeftOf="@+id/button2"
         app:layout_constraintTop_toBottomOf="@+id/button2" />
 
     <TextView
+        android:id="@+id/string3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="String 3:"
+        android:textSize="18sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/stringView2"
+        android:layout_marginLeft="-20dp"
+        app:layout_constraintLeft_toLeftOf="@+id/string2" />
+
+    <TextView
+        android:id="@+id/string2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="String 2:"
+        android:textSize="18sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/stringView1"
+        app:layout_constraintRight_toLeftOf="@+id/stringView1"
+        android:layout_marginRight="8dp" />
+
+    <TextView
+        android:id="@+id/stringView1"
+        android:layout_width="125dp"
+        android:layout_height="37dp"
+        android:paddingBottom="5dp"
+        android:paddingTop="5dp"
+        android:text="TextView"
+        android:textSize="18sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/button2"
+        app:layout_constraintRight_toLeftOf="@+id/button2"
+        android:layout_marginRight="8dp" />
+
+    <TextView
         android:id="@+id/string1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginRight="5dp"
         android:text="String 1:"
         android:textSize="18sp"
-        app:layout_constraintBaseline_toBaselineOf="@+id/editText2"
-        app:layout_constraintRight_toLeftOf="@+id/editText2" />
+        app:layout_constraintBaseline_toBaselineOf="@+id/editText"
+        android:layout_marginLeft="-38dp"
+        app:layout_constraintLeft_toLeftOf="@+id/string2" />
+
+    <TextView
+        android:id="@+id/stringView2"
+        android:layout_width="125dp"
+        android:layout_height="37dp"
+        android:paddingBottom="5dp"
+        android:paddingTop="5dp"
+        android:text="TextView"
+        android:textSize="18sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/button3"
+        android:layout_marginLeft="0dp"
+        app:layout_constraintLeft_toLeftOf="@+id/stringView1" />
 
 </android.support.constraint.ConstraintLayout>
