@@ -26,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
         super.onResume();
         SharedPreferences settings = getSharedPreferences(MainActivity.MYPREFS, 0);
         String myText = settings.getString(MainActivity.PREF_STRING_1, "");
-        EditText edv = (EditText) findViewById(R.id.editText1);
+        EditText edv = (EditText) findViewById(R.id.editText2);
         edv.setText(myText);
 
         EditText edv2 = (EditText) findViewById(R.id.editText2);
@@ -37,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void goOther(View V) {
         // Grab the text, and store it in a preference.
-        EditText edv = (EditText) findViewById(R.id.editText1);
+        EditText edv = (EditText) findViewById(R.id.editText2);
         String text1 = edv.getText().toString();
         SharedPreferences settings = getSharedPreferences(MYPREFS, 0);
         SharedPreferences.Editor editor = settings.edit();
