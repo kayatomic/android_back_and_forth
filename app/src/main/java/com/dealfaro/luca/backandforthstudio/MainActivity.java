@@ -24,10 +24,10 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onResume() {
         super.onResume();
-        SharedPreferences settings = getSharedPreferences(MainActivity.MYPREFS, 0);
-        String myText = settings.getString(MainActivity.PREF_STRING_1, "");
-        EditText edv = (EditText) findViewById(R.id.editText);
-        edv.setText(myText);
+//        SharedPreferences settings = getSharedPreferences(MainActivity.MYPREFS, 0);
+//        String myText = settings.getString(MainActivity.PREF_STRING_1, "");
+//        EditText edv = (EditText) findViewById(R.id.editText);
+//        edv.setText(myText);
 
         EditText edv2 = (EditText) findViewById(R.id.editText);
         if (appInfo.sharedString != null) {

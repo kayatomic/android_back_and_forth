@@ -17,6 +17,7 @@ public class AppInfo {
 
     // Here are some values we want to keep global.
     public String sharedString;
+    public String[] stringArr = new String[3];
 
     private Context my_context;
 
@@ -32,6 +33,7 @@ public class AppInfo {
 
     public void setColor(String c) {
         instance.sharedString = c;
+
         SharedPreferences settings = my_context.getSharedPreferences(MainActivity.MYPREFS, 0);
         SharedPreferences.Editor editor = settings.edit();
         editor.putString(COLOR_NAME, c);
