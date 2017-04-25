@@ -31,16 +31,19 @@ public class MainActivity extends AppCompatActivity {
 //        edv.setText(myText);
 
         EditText edv2 = (EditText) findViewById(R.id.editText);
-        if (appInfo.sharedString != null) {
-            edv2.setText(appInfo.sharedString);
+        if (appInfo.string1 != null) {
+            edv2.setText(appInfo.string1);
         }
 
         TextView tv1 = (TextView) findViewById(R.id.stringView1);
-        tv1.setText(appInfo.sharedString);
+        tv1.setText(appInfo.string2);
+
+        TextView tv2 = (TextView) findViewById(R.id.stringView2);
+        tv2.setText(appInfo.string3);
 
     }
 
-    public void goOther(View V) {
+    public void saveString(View V) {
 //        // Grab the text, and store it in a preference.
 //        EditText edv = (EditText) findViewById(R.id.editText);
 //        String text1 = edv.getText().toString();
@@ -52,7 +55,7 @@ public class MainActivity extends AppCompatActivity {
         // The second string we store it in the singleton class.
         EditText edv2 = (EditText) findViewById(R.id.editText);
         String text2 = edv2.getText().toString();
-        appInfo.setColor(text2);
+        appInfo.setColor("str1", text2);
     }
 
     // Go to second activity

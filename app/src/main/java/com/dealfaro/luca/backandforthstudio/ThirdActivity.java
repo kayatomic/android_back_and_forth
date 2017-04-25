@@ -27,14 +27,24 @@ public class ThirdActivity extends AppCompatActivity {
 //        String myText = settings.getString(PREF_STRING_1, "");
 //        TextView tv = (TextView) findViewById(R.id.stringView1);
 //        tv.setText(myText);
+        EditText edv2 = (EditText) findViewById(R.id.editText);
+        if (appInfo.string3 != null) {
+            edv2.setText(appInfo.string3);
+        }
 
-        // Writes the String from the singleton object
-        TextView stringView1 = (TextView) findViewById(R.id.stringView1);
-        stringView1.setText(appInfo.sharedString);
+        TextView tv1 = (TextView) findViewById(R.id.stringView1);
+        tv1.setText(appInfo.string1);
 
-        TextView stringView2 = (TextView) findViewById(R.id.stringView2);
-        stringView2.setText(appInfo.sharedString);
+        TextView tv2 = (TextView) findViewById(R.id.stringView2);
+        tv2.setText(appInfo.string2);
 
+    }
+
+    public void saveString(View V) {
+        // The second string we store it in the singleton class.
+        EditText edv2 = (EditText) findViewById(R.id.editText);
+        String text2 = edv2.getText().toString();
+        appInfo.setColor("str3", text2);
     }
 
     // Go to first activity

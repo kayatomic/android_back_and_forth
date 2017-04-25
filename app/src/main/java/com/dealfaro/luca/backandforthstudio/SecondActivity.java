@@ -30,10 +30,17 @@ public class SecondActivity extends AppCompatActivity {
 //        String myText = settings.getString(PREF_STRING_1, "");
 //        TextView tv = (TextView) findViewById(R.id.stringView1);
 //        tv.setText(myText);
+        appInfo = AppInfo.getInstance(this);
+        EditText edv2 = (EditText) findViewById(R.id.editText);
+        if (appInfo.string2 != null) {
+            edv2.setText(appInfo.string2);
+        }
 
-        // Writes the String from the singleton object
-        TextView tv2 = (TextView) findViewById(R.id.stringView1);
-        tv2.setText(appInfo.sharedString);
+        TextView tv1 = (TextView) findViewById(R.id.stringView1);
+        tv1.setText(appInfo.string1);
+
+        TextView tv2 = (TextView) findViewById(R.id.stringView2);
+        tv2.setText(appInfo.string3);
 
     }
 
@@ -41,7 +48,7 @@ public class SecondActivity extends AppCompatActivity {
         // The second string we store it in the singleton class.
         EditText edv2 = (EditText) findViewById(R.id.editText);
         String text2 = edv2.getText().toString();
-        appInfo.setColor(text2);
+        appInfo.setColor("str2", text2);
     }
 
     // Go to first activity
