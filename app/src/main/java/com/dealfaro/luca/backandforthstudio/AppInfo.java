@@ -9,7 +9,6 @@ import android.content.SharedPreferences;
 public class AppInfo {
 
     private static AppInfo instance = null;
-    private static final String COLOR_NAME = "color2";
     private static final String STRING1 = "str1";
     private static final String STRING2 = "str2";
     private static final String STRING3 = "str3";
@@ -29,7 +28,12 @@ public class AppInfo {
             instance = new AppInfo();
             instance.my_context = context;
             SharedPreferences settings = context.getSharedPreferences(MainActivity.MYPREFS, 0);
-            //instance.sharedString = settings.getString(COLOR_NAME, null);
+            instance.string1 = settings.getString(STRING1, null);
+            instance.string2 = settings.getString(STRING2, null);
+            instance.string3 = settings.getString(STRING3, null);
+        } else {
+            instance.my_context = context;
+            SharedPreferences settings = context.getSharedPreferences(MainActivity.MYPREFS, 0);
             instance.string1 = settings.getString(STRING1, null);
             instance.string2 = settings.getString(STRING2, null);
             instance.string3 = settings.getString(STRING3, null);
@@ -37,12 +41,10 @@ public class AppInfo {
         return instance;
     }
 
-    public void setColor(String key, String c) {
-        //instance.sharedString = c;
-
+    public void setColor(String key, String value) {
         SharedPreferences settings = my_context.getSharedPreferences(MainActivity.MYPREFS, 0);
         SharedPreferences.Editor editor = settings.edit();
-        editor.putString(key, c);
+        editor.putString(key, value);
         editor.commit();
     }
 

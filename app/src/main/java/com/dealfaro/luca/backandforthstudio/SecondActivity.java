@@ -30,7 +30,6 @@ public class SecondActivity extends AppCompatActivity {
 //        String myText = settings.getString(PREF_STRING_1, "");
 //        TextView tv = (TextView) findViewById(R.id.stringView1);
 //        tv.setText(myText);
-        appInfo = AppInfo.getInstance(this);
         EditText edv2 = (EditText) findViewById(R.id.editText);
         if (appInfo.string2 != null) {
             edv2.setText(appInfo.string2);
@@ -68,14 +67,6 @@ public class SecondActivity extends AppCompatActivity {
         Intent intent = new Intent(this, MainActivity.class);
         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
         startActivity(intent);
-    }
-
-
-    public void clickBack(View V) {
-        Intent intent = new Intent(this, MainActivity.class);
-        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-        startActivity(intent);
-        // finish();
     }
 
 }
