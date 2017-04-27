@@ -26,18 +26,12 @@ public class AppInfo {
     public static AppInfo getInstance(Context context) {
         if(instance == null) {
             instance = new AppInfo();
-            instance.my_context = context;
-            SharedPreferences settings = context.getSharedPreferences(MainActivity.MYPREFS, 0);
-            instance.string1 = settings.getString(STRING1, null);
-            instance.string2 = settings.getString(STRING2, null);
-            instance.string3 = settings.getString(STRING3, null);
-        } else {
-            instance.my_context = context;
-            SharedPreferences settings = context.getSharedPreferences(MainActivity.MYPREFS, 0);
-            instance.string1 = settings.getString(STRING1, null);
-            instance.string2 = settings.getString(STRING2, null);
-            instance.string3 = settings.getString(STRING3, null);
         }
+        instance.my_context = context;
+        SharedPreferences settings = context.getSharedPreferences(MainActivity.MYPREFS, 0);
+        instance.string1 = settings.getString(STRING1, null);
+        instance.string2 = settings.getString(STRING2, null);
+        instance.string3 = settings.getString(STRING3, null);
         return instance;
     }
 
